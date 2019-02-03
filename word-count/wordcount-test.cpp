@@ -43,22 +43,11 @@ vector<string> load_words (string filename){
   if (infile){
     string word;
     while(infile >> word){
-      string new_word = "";
-  /*    for (char c : word) {
-if (c == '.' || c == ',') {
-  continue;
-}else if (isupper(c)){
-  new_word+=tolower(c);
-} else  {
-  new_word += c;
-}
-
-}*/
-
-words.push_back(new_word);
+    words.push_back(word);
+      }
+    infile.close();
   }
-infile.close();
-}
+
 return words;
 }
 

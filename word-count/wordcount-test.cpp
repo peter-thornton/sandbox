@@ -16,7 +16,7 @@ int main () {
   auto words = load_words(filename);
 
   cout << words.size() << " WORDS: ";
-  for (strubg word : words){
+  for (string word : words){
     cout << word << ' ';
   }
   cout << endl << endl;
@@ -43,8 +43,8 @@ vector<string> load_words (string filename){
   if (infile){
     string word;
     while(infile >> word){
-      string new_word + "";
-      for (char c : word) {
+      string new_word = "";
+  /*    for (char c : word) {
 if (c == '.' || c == ',') {
   continue;
 }else if (isupper(c)){
@@ -53,7 +53,8 @@ if (c == '.' || c == ',') {
   new_word += c;
 }
 
-    }
+}*/
+
 words.push_back(new_word);
   }
 infile.close();
